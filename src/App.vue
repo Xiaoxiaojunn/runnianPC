@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Menu from './pages/Menu'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    // Menu,
+  },
+  mounted() {
+    // 关闭浏览器窗口的时候清空浏览器缓存在localStorage的数据
+            window.onbeforeunload = function () {
+                var storage = window.localStorage;
+                storage.clear()
+            }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>
