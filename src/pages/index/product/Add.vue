@@ -1,6 +1,6 @@
 <template>
   <div id="productApp">
-    <h4>商品添加</h4>
+    <h4>商品添加1</h4>
     <el-form
       :model="addForm"
       :rules="rules"
